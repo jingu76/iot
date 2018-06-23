@@ -1,0 +1,265 @@
+:host {
+    display: block;
+}
+
+.detail {
+    display: flex;
+    flex-direction: column;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1536px;
+    .top{
+        position: relative;
+        display: flex;
+        width:100%;
+        .info{
+            // width:30%;
+            padding-left: 20px;
+            padding-right: 30px;
+            // margin: 10px;
+            font-size: 16px;
+            display: flex;
+            position: relative;
+            flex-direction: row;
+            justify-content: space-around;
+            div{
+                margin: 10px;
+            }
+        }
+        .drivingInfo{
+            position: relative;
+            display: flex;
+            flex-direction: row;
+        }
+    }
+    .centre{
+        position: relative;
+        flex-direction: row;
+        display: flex;
+        width: 100%;
+        .left {
+            // margin-left: auto;
+            // padding-top: 5px;
+            // padding-bottom: 5px;
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            .info{
+                margin: 10px;
+                font-size: 18px;
+                div{
+                    margin: 10px;
+                }
+            }
+            .mapText{
+                position: absolute;
+                left: 40%;
+                top: 85%;
+                z-index: 1;
+                color: black;
+                background-color:aliceblue;
+            }
+            .leftText{
+                position: absolute;
+                left: 40%;
+                top: 85%;
+                z-index: 1;
+                color: black;
+                background-color:aliceblue;
+            }
+            .leftView{
+                right: -15px;
+                top: 200px;
+                z-index: 1;
+            }
+            .vertical_half{
+                height: 285px;
+                position: relative;
+            }
+            .map_view{
+                border: solid;
+                border-color: #aaa;
+                border-width: 1px;
+                background-color: #124191;
+            }
+        }
+        .middle {
+            position: relative;
+            margin-left: auto;
+            margin-right: auto;
+            width: 768px;
+            height: 576px;
+            .speakerView{
+                position: absolute;
+                left: 0px;
+                z-index: 2;
+            }
+            .innerView{
+                position: absolute;
+                left: 492px;
+                z-index: 2;
+            }
+            .innerText{
+                font-size: 10px;
+                position: absolute;
+                left: 79%;
+                top: 30%;
+                z-index: 3;
+                color: black;
+                background-color:aliceblue;
+            }
+            .middleText{
+                font-size:20px;
+                position: absolute;
+                left: 44%;
+                top: 92%;
+                z-index: 1;
+                color: black;
+                background-color:aliceblue;
+            }
+            .video-hide {
+                display: none;
+            }
+        }
+        .right {
+            position: relative;
+            width: 380px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            // padding-bottom: 8px;
+            .rearView{
+                position: absolute;
+                // left: 450px;
+                z-index: 1;
+            }
+            .rearText{
+                position: absolute;
+                left: 40%;
+                top: 85%;
+                z-index: 2;
+                color: black;
+                background-color:aliceblue;
+            }
+            .rightView{
+                position: relative;
+                // left: 0px;
+                // top: 200px;
+                z-index: 1;
+            }
+            .rightText{
+                position: absolute;
+                left: 40%;
+                top: 85%;
+                z-index: 1;
+                color: black;
+                background-color:aliceblue;
+            }
+            .btndisable
+            {
+                background-color: gray;
+            }   
+            .vertical_half{
+                height: 285px;
+                position: relative;
+            }
+        }    
+    }
+    .bottom{
+        position: relative;
+        flex-direction: row;
+        display: flex;
+        width:100%; 
+        top:10px;
+        .alarm{
+            width:573px;
+            height: 180px;
+            border: solid;
+            border-color: #aaa;
+            border-width: 1px;
+            position: relative;
+            text-align: left;
+        }
+        .networkKPI{
+            width: 573px;
+            height: 180px;
+            border: solid;
+            border-color: #aaa;
+            position: relative;
+            border-width: 1px;
+            margin-left: 6px;
+        }
+        .divbtn{
+            position: relative;
+            width: 760px;
+            height: 180px;
+            display: flex;
+            border: solid;
+            border-color: #aaa;
+            border-width: 1px;
+            position: relative;
+            margin-left: 6px;
+            justify-content:flex-end;
+            -webkit-justify-content:flex-end;
+        }
+        .buttonGroup{
+            flex-direction: column;
+            position: relative;
+            display: flex;
+            border: solid;
+            border-color: #aaa;
+            border-width: 0px;
+            margin: 6px;         
+            
+        }
+        .ctl-button {
+            margin: 15px;
+            height: 50px;
+            width: 150px; 
+            background-color: #124191;
+            color: #fff;
+            font-size: 18px;
+        }
+        .btndisable{
+            background-color: #666;
+        }
+    }
+}
+
+.map{
+    background: white;
+    width: 900px;
+    height: 600px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    margin-left: -450px;
+    margin-top: -300px; 
+    z-index: 4;
+    box-shadow: 2px 4px 20px 0px #000;
+}
+
+.backGround{
+    position: absolute;
+    top:0;
+    opacity: 0.8;
+    background: #efefef;
+    width: 100%;
+    height: 100%;
+    z-index: 3;
+}
+
+#frontView{
+    // left: 50px;
+    // top: 50px;
+    // width: 1024px;
+    // height: 768px;
+    width: 640px;
+    height:480px;
+}
+
+#remoteSpVideo { 
+    width: 100px; 
+    height: 100px; 
+ }

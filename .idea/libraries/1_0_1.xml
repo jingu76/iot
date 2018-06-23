@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/poc/paho-publish-subscribe-master/lib/org/eclipse/paho/paho-mqtt-client/1.0.1/paho-mqtt-client-1.0.1-javadoc.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poc/paho-publish-subscribe-master/lib/org/eclipse/paho/paho-mqtt-client/1.0.1/paho-mqtt-client-1.0.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/poc/paho-publish-subscribe-master/lib/org/eclipse/paho/paho-mqtt-client/1.0.1/paho-mqtt-client-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

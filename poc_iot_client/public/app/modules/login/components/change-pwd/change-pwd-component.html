@@ -1,0 +1,40 @@
+<form class="n-account-body" (ngSubmit)="onSubmit()" [formGroup]="changePwdForm" novalidate>
+    <div class="n-formfield">
+        <input class="n-textfield" placeholder="New password" formControlName="newPassword" required>
+        <span class="n-icon n-icon-mandatory" *ngIf="!changePwdForm.value.newPassword"></span>
+    </div>
+    <div class="n-formfield">
+        <input class="n-textfield" type="password" placeholder="Confirm password" formControlName="confirmPassword" required>
+        <span class="n-icon n-icon-mandatory" *ngIf="!changePwdForm.value.confirmPassword"></span>
+    </div>
+    <div>
+        <div class="n-account-advance-setting">
+            <button type="button" class="n-btn n-btn-icon n-btn-details" (click)="toggleRules()" >
+                <span>{{"login.changePwd_rules" | i18n}}</span>
+                <i [class]="showRules ? 'n-icon n-icon-arrow-up': 'n-icon n-icon-arrow'" ></i>
+            </button>
+        </div>
+        <div name="rules" class="n-account-setting-content" [@toggleChanged]="showRules ? 'shown' : 'hidden' ">
+            <ul>
+                <li>{{"login.changePwd_length_rule" | i18n}}</li>
+                <li>{{"login.changePwd_number_rule" | i18n}}</li>
+                <li>{{"login.changePwd_nonAlpha_rule" | i18n}}</li>
+                <li>{{"login.changePwd_uppcase_rule" | i18n}}</li>
+                <li>{{"login.changePwd_consecutive_rule" | i18n}}</li>
+                <li>
+                    <span>{{"login.changePwd_notAllowed_rule" | i18n}}</span>
+                    <ul>
+                        <li>{{"login.changePwd_notAllowed_control" | i18n}}</li>
+                        <li>{{"login.changePwd_notAllowed_space" | i18n}}</li>
+                        <li>{{"login.changePwd_notAllowed_delimiter" | i18n}}</li>
+                        <li>{{"login.changePwd_notAllowed_unwiser" | i18n}}</li>
+                        <li>{{"login.changePwd_notAllowed_colon" | i18n}}</li>
+                        <li>{{"login.changePwd_notAllowed_other" | i18n}}</li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <button name="change" type="submit" class="n-btn n-btn-default" [disabled]="!changePwdForm.valid || pending">{{"login.changePwd_submit" | i18n}}</button>
+    <button name="cancel" type="button" class="n-btn" [disabled]="!pending" (click)="onCancel()">{{"login.changePwd_cancel" | i18n}}</button>
+</form>

@@ -1,0 +1,50 @@
+$dialog-background-color: #FFF;
+$overlay-background-color: rgba($dialog-background-color, .5);
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 999;
+  background-color: $overlay-background-color;
+}
+
+$dialog-shadow1-color: rgba($dialog-background-color, .2);
+$dialog-shadow2-color: rgba($dialog-background-color, .14);
+$dialog-shadow3-color: rgba($dialog-background-color, .12);
+
+.dialog {
+  position: fixed;
+  top: 20px;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  width: 90%;
+  max-width: 520px;
+  min-height: 200px;
+  padding: 12px;
+  margin-right: auto;
+  margin-left: auto;
+  background-color: $dialog-background-color;
+  box-shadow: 0 7px 8px -4px $dialog-shadow1-color, 0 13px 19px 2px $dialog-shadow1-color, 0 5px 24px 4px $dialog-shadow3-color;
+}
+
+@media (min-width: 768px) {
+  .dialog {
+    top: 40px;
+  }
+}
+
+$dialog-close-color: #2D2D2D;
+
+.dialog__close-btn {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  font-size: 1.2em;
+  color: $dialog-close-color;
+  background: none;
+  border: 0;
+}

@@ -1,0 +1,15 @@
+<form class="n-account-body" (ngSubmit)="onSubmit()" [formGroup]="loginForm" novalidate>
+    <div class="n-formfield">
+        <input class="n-textfield" placeholder="Administrator" formControlName="userName" required>
+        <span class="n-icon n-icon-mandatory" *ngIf="!loginForm.value.userName"></span>
+    </div>
+    <div class="n-formfield">
+        <input class="n-textfield" type="password" placeholder="Password" formControlName="password" required>
+        <span class="n-icon n-icon-mandatory" *ngIf="!loginForm.value.password"></span>
+    </div>
+    <button name="submit" type="submit" class="n-btn n-btn-default" [disabled]="!loginForm.valid || pending">{{"login.loginForm_submit" | i18n}}</button>
+    <button name="cancel" type="button" class="n-btn" [disabled]="!pending" (click)="onCancel()">{{"login.loginForm_cancel" | i18n}}</button>
+</form>
+<div class="n-account-footer">
+    <hr>
+</div>

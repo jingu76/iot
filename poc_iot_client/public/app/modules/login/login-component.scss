@@ -1,0 +1,29 @@
+@keyframes progressing {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+$border-color: #00C9FF;
+
+.sc-login {
+  &__progress {
+    position: relative;
+    top: -21px;
+    margin-right: -29px;
+    margin-left: -29px;
+    border: 1px solid $border-color;
+    animation: progressing 10s ease-out;
+  }  
+}
+.footer {
+  position: fixed;
+  bottom: 20px;
+  font-size: 16px;
+  text-align: center;
+  width: 100%;
+}

@@ -1,0 +1,21 @@
+:host {
+    display: inline-block;
+}
+
+.hw-battery {
+    outline: none;
+    display: flex;
+    flex-direction: row;
+    svg {
+        display: block;
+        fill:#727272;
+    }
+    .hw-core {
+        height: 10px;
+        background-color: red;
+        margin-top: 12px;
+        position: relative;
+        left: -28px;
+    }
+}
+

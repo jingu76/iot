@@ -1,0 +1,25 @@
+<div class="car-card" (click)="onClick()" [class.car-card--serving]="serving" [class.car-card--charging]="charging" [class.car-card--standby]="standby"
+    [class.car-card--unavailable]="unavailable">
+    <div class="car-card__img">
+        <div class="car-card__mask"></div>
+        <div class="car-card__statusimg" [class.car-card__statusimg__serving]="serving" [class.car-card__statusimg__charging]="charging"
+            [class.car-card__statusimg__standby]="standby" [class.car-card__statusimg__na]="unavailable"></div>
+    </div>
+    <div class="car-card__detail">
+        <div style="display:flex">
+            <div class="car-card__name">{{carinfo.name}}</div>
+            <span class="car-card__status">{{carinfo.availability}}</span>
+        </div>
+        <div>
+            <div class="car-card__id">{{carinfo.vin}}</div>
+        </div>
+        <div>
+            <div class="car-card__map">map: {{carinfo.attached_map}}</div>
+        </div>
+        <div style="display:flex">
+            <div class="car-card__line">route: {{carinfo.attached_line}}</div>
+            <span class="car-card__condition">{{carinfo.condition}}</span>
+        </div>
+    </div>
+
+</div>

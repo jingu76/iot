@@ -1,0 +1,78 @@
+:host {
+    display: inline-block;
+}
+
+.car-card {
+    outline: none;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    cursor: pointer;
+    padding: 5px;
+    flex-direction: column;
+    &__img{
+        width: 286px;
+        height: 270px;
+        background-image: url("../../assets/car.png");
+        background-repeat: no-repeat;
+    }
+    &__mask{
+        position: relative;
+        height: 270px;
+        top: 0px;
+        left: 0px;
+        background-repeat: no-repeat;
+        background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(239,239,239,0)), to(rgba(239,239,239,0)));
+    }
+    &__statusimg{
+        position: relative;
+        height: 100px;
+        top:-250px;
+        left:200px;
+        background-size: 50px;
+        background-repeat: no-repeat;
+        &__serving{
+            background-image: url("../../assets/serving.png");
+        }
+        &__charging{
+            background-image: url("../../assets/charging.png");
+        }
+        &__standby{
+            background-image: url("../../assets/standby.png");
+        }
+        &__na{
+            background-image: url("../../assets/na.png");
+        }
+    }
+    &__detail{
+        padding-top: 15px;
+    }
+    &__name{
+        flex:1;
+    }
+    &__line{
+        flex:1;
+    }
+    &--serving {
+        border: 2px solid green;
+        span{
+            color:green;
+        }
+    }
+    &--charging {
+        border: 2px solid orange;
+        span{
+            color:orange;
+        }
+    }
+    &--standby {
+        border: 2px solid black;
+    }
+    &--unavailable {
+        border: 2px solid red;
+        span{
+            color:red;
+        }
+    }
+}
+

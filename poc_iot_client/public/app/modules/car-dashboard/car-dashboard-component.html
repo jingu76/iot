@@ -1,0 +1,9 @@
+<md-card style="box-shadow:0 0 0 0">
+    <md-card-content>
+        <md-grid-list cols="4" [rowHeight]="400">
+            <md-grid-tile *ngFor="let car of cars">
+                <car-card [carinfo]="car"></car-card>
+            </md-grid-tile>
+        </md-grid-list>
+    </md-card-content>
+</md-card>

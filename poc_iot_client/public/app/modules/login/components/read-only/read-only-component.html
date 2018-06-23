@@ -1,0 +1,5 @@
+<sc-dialog [visible]="'true'">
+  <p>{{message}}</p>
+  <button name="connect" type="button" class="n-btn n-btn-default" (click)="onConnect()">{{"login.readOnly_submit" | i18n}}</button>
+  <button name="cancel" type="button" class="n-btn" (click)="onCancel()">{{"login.readOnly_cancel" | i18n}}</button>
+</sc-dialog>

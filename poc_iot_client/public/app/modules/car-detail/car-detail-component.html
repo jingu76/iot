@@ -1,0 +1,73 @@
+<div class="main-outlet__app-bar">
+    <app-bar></app-bar>
+</div>
+<div class="detail">
+    <div class="top">
+        <div class="info">
+            <div>{{Menuvehiclename}}: {{carinfo?.name}}</div>
+            <div>Vin: {{carinfo?.vin}}</div>
+            <div>Map: {{carinfo?.attached_map}}</div>
+            <div>Route: {{carinfo?.attached_line}}</div>   
+            <div>Availability: {{carinfo?.availability}}</div> 
+            <div>Condition: {{carinfo?.condition}}</div> 
+            <div>DrivingMode: {{carDrivingMode}}</div>
+            <div>Theta: {{carTheta}}</div>
+            <div>Speed: {{carSpeed}}</div>            
+        </div>
+        <div class="info">
+            <div></div>
+        </div>
+    </div>
+    <div class="centre">
+        <div class="left">
+            <div class="vertical_half map_view">
+                <map-view *ngIf="mapInfo.map" [mapInfo]="mapInfo.map" [carLoc]="carLoc" [option]="mapOption"></map-view>
+                <div *ngIf="mapInfo.map" class="mapText">{{map_button_text}}</div>
+            </div>
+            <div class="vertical_half">
+                <myVideo class="leftView" [position]="'left'"></myVideo>
+                <div class="leftText">{{leftviewtext}}</div>
+            </div>
+        </div>
+        <div class="middle">
+            <video id = "remoteSpVideo" autoplay></video>
+            <div class="innerText">{{innerviewtext}}</div>
+            <myVideo class="innerView" [position]="'inner'"></myVideo>
+            <div class="middleText">{{frontviewtext}}</div>
+            <myVideo id="frontView" [position]="'front'"></myVideo>
+            <div class="wheel"></div>
+        </div>
+        <div class="right">
+            <div class="vertical_half">
+                <div class="rearText">{{rearviewtext}}</div>
+                <myVideo class="rearView" [position]="'rear'"></myVideo>
+            </div>
+            <div class="vertical_half">
+                <myVideo class="rightView" [position]="'right'"></myVideo>
+                <div class="rightText">{{rightviewtext}}</div>
+            </div>
+        </div>    
+    </div>
+    <div class="bottom">
+        <div class="alarm">
+            Alarm Information, No API available currently!  
+        </div>
+        <div class="networkKPI">
+            Network KPI, No API available currently!
+        </div>
+        <div class="divbtn">
+            <div class="buttonGroup">
+                <button class="ctl-button" [class.btndisable]="isMapDisabled" [disabled]="isMapDisabled"(click)="mapActive=true">Map</button>
+                <button class="ctl-button" [class.btndisable]="isAutoSwithDisabled" [disabled]="isAutoSwithDisabled" (click)="onAutoClick($event)">{{autoOrManual}}</button>
+            </div>
+            <div class="buttonGroup">
+                <button class="ctl-button" [class.btndisable]="isStartSwithDisabled" [disabled]="isStartSwithDisabled" (click)="onStopClick($event)">{{stopOrStart}}</button>
+                <button class="ctl-button" [class.btndisable]="isPauseSwithDisabled" [disabled]="isPauseSwithDisabled" (click)="onPauseClick($event)">{{pauseOrResume}}</button>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="map" *ngIf="mapActive">
+    <map-form (output)="mapClose($event)" [carInfo]="carinfo" [carLoc]="carLoc"></map-form>
+</div>
+<div class="backGround" [hidden]="!mapActive"></div>

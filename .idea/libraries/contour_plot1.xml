@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="contour_plot1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/client/node_modules/contour_plot/build/contour_plot.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="poc">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/poc/mqtt-client-master.zip!/" />
+      <root url="jar://$PROJECT_DIR$/poc/paho.mqtt.java-master.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

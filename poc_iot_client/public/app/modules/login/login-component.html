@@ -1,0 +1,24 @@
+<div class="n-absolute-account-container">
+    <div class="n-account-logo">
+        <span class="n-account-logo-image"></span>
+    </div>
+    <div class="n-account-card">
+        <div [ngClass]="{'sc-login__progress': (pending | async)}"></div>
+        <h1 class="n-account-title">
+            <span class="n-product-name-blue">{{title}}</span>
+        </h1>
+        <h2 class="n-account-title-version-light">{{version}}</h2>
+        <sc-login__form
+            (submitted)="onLogin($event)"
+            (cancelled)="onLoginCancel($event)"
+            [pending]="pending | async"
+            [allowedSettings]="allowedSettings | async"
+        >
+        </sc-login__form>        
+    </div>
+</div>
+<div class="footer">
+    <div class="copyright">Copyright: Nokia 2017</div>
+    <div class="Developer">Developer: GuJingjun, HuJunyu, PanJunjie, Lie Lee, Eliphaz Liu</div>
+    <div class="Tester">Tester: Sun Dunlei L, Liu Wu</div>
+</div>

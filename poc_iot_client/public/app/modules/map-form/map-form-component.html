@@ -1,0 +1,36 @@
+<div class="content">
+  <map-view *ngIf="map" [mapInfo]="map" [route]="mapInfo.route" [carLoc]="carLocation" [lineId]="line && line.id" [option]="option" (onStopSelected)="onStopSelected($event)" ></map-view>
+</div>
+<div class="seletor">
+  <div class="container"> 
+    <div>
+      <h1 class="title">Stop Selector</h1>
+      <form (ngSubmit)="onSubmit()" #siteForm="ngForm">
+        <div class= "form-group">
+          <label for="map">Map:</label>
+          <md-select class="selector" placeholder="Map"  name="map" [(ngModel)]="map" (change) ="onMapChange($event)" #teamRef="ngModel" required>
+            <md-option *ngFor="let p of maps" [value]="p">{{p.name}}</md-option>
+          </md-select>
+        </div>
+        <div class= "form-group">
+          <label for="line">Line:</label>
+          <md-select class="selector" placeholder="Line"  name="line" [(ngModel)]="line" (change)="onLineChange($event)" #teamRef="ngModel" required>
+            <md-option *ngFor="let p of lines" [value]="p">{{p.name}}</md-option>
+          </md-select>
+        </div>
+        <div class= "form-group">
+          <label for="stop">Stop:</label>
+          <md-select class="selector" placeholder="Stop"  name="stop" [(ngModel)]="stop" (change)="onStopChange($event)" #teamRef="ngModel" required>
+            <md-option *ngFor="let p of stops" [value]="p">{{p.name}}</md-option>
+          </md-select>
+        </div>
+        <div class="form-group">
+          <button type="button" class="btn" (click)="closeForm()">Close</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="close_com">
+  <i class="icon" (click)="closeForm()"></i>
+</div>

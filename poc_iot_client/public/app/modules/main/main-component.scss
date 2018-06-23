@@ -1,0 +1,21 @@
+:host {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.main-outlet {
+    &__body {
+        margin-top: 64px;
+        padding: 0 30px;
+        flex-grow: 1;
+        flex-basis: 100%;
+    }
+    &__footer {
+        display: flex;
+        justify-content: flex-end;
+        margin: 16px 0;
+        padding: 0 30px;
+    }
+}
